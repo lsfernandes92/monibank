@@ -1,13 +1,13 @@
-<p align="center"> <img src="https://imgur.com/mIBmcEL.png" alt="Javascript: validando formulários"> </p>
+# monibank
 
 <hr>
 
-<p align="center"> <img src="https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png" alt="Logo da Alura"> </p>
-<p align="center">Formulário de criação de contas para o banco virtual MoniBank.</p>
+<p align="center"> <img src="https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png" alt="Alura logo"> </p>
+<p align="center">Account creation form for the virtual bank MoniBank.</p>
 
-## Tecnologias utilizadas durante o curso
+## Tech stack during the course
 * JavaScript
 
-## Tecnologias utilizadas no projeto
+## Tech stack used by the project
 * HTML
 * CSS
