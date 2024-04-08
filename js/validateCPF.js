@@ -1,10 +1,11 @@
-export function isAValidCPF(documentNumber) {
+export function isAValidCPF(field) {
+  const documentNumber = field.value;
   const sanitizedCPF = documentNumber.replace(/\.|\-/g, "");
 
   if (nonRepeatedNumbers(sanitizedCPF) && validLastTwoDigits(sanitizedCPF)) {
     console.log("This CPF document number is correct.");
   } else {
-    console.log("This CPF document number doesn't exist.");
+    field.setCustomValidity("The CPF document number doesn't exist.");
   }
 }
 

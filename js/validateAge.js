@@ -1,7 +1,9 @@
-export function isAbove18Years(date) {
-  const birthdate = new Date(date);
+export function isAbove18Years(field) {
+  const birthdate = new Date(field.value);
 
-  validateDate(birthdate);
+  if (!validateDate(birthdate)) {
+    field.setCustomValidity("User is not above 18 years.")
+  }
 }
 
 function validateDate(date) {
