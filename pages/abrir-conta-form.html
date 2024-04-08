@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/formulario/styles.css">
+    <script src="../js/script.js" type="module"></script>
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
                     <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text"
-                        minlength="11" maxlength="14" />
+                        minlength="11" maxlength="14" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
