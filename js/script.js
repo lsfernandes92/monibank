@@ -2,6 +2,23 @@ import { isAValidCPF } from "./validateCPF.js";
 import { isAbove18Years } from "./validateAge.js";
 
 const formFields = document.querySelectorAll("[required]");
+const form = document.querySelector("[data-formulario]");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = {
+    "name": event.target.elements["nome"].value,
+    "email": event.target.elements["email"].value,
+    "rg": event.target.elements["rg"].value,
+    "cpf": event.target.elements["cpf"].value,
+    "birthdate": event.target.elements["aniversario"].value
+  }
+
+  localStorage.setItem("form-data", JSON.stringify(formData));
+
+  window.location.href = "./abrir-conta-form-2.html";
+});
 
 formFields.forEach((field) => {
   field.addEventListener("blur", () => validateField(field));
