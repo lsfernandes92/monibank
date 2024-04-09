@@ -4,6 +4,7 @@ const video = document.querySelector("[data-video]");
 const btTakePicture = document.querySelector("[data-tirar-foto]");
 const divMessage = document.querySelector("[data-mensagem]");
 const canvas = document.querySelector("[data-video-canvas]");
+const btSendPhoto = document.querySelector("[data-enviar]");
 
 let imageURL = "";
 
@@ -27,3 +28,14 @@ btTakePicture.addEventListener("click", function() {
   divCamera.style.display = "none";
   divMessage.style.display = "block";
 });
+
+btSendPhoto.addEventListener("click", (event) => {
+  const dataFromLocalStorage = localStorage.getItem("form-data");
+  const convertedDataFromLocalStorage = JSON.parse(dataFromLocalStorage);
+
+  convertedDataFromLocalStorage.imagem = imageURL;
+
+  localStorage.setItem("form-data", JSON.stringify(convertedDataFromLocalStorage));
+
+  window.location.href = "./abrir-conta-form-3.html";
+})
